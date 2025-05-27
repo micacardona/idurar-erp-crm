@@ -12,8 +12,6 @@ import { FILE_BASE_URL } from '@/config/serverApiConfig';
 
 import useLanguage from '@/locale/useLanguage';
 
-import UpgradeButton from './UpgradeButton';
-
 export default function HeaderContent() {
   const currentAdmin = useSelector(selectCurrentAdmin);
   const { Header } = Layout;
@@ -29,7 +27,7 @@ export default function HeaderContent() {
           className="last"
           src={currentAdmin?.photo ? FILE_BASE_URL + currentAdmin?.photo : undefined}
           style={{
-            color: '#f56a00',
+            color: '#222',
             backgroundColor: currentAdmin?.photo ? 'none' : '#fde3cf',
             boxShadow: 'rgba(150, 190, 238, 0.35) 0px 0px 6px 1px',
           }}
@@ -123,7 +121,6 @@ export default function HeaderContent() {
 
       {/* <AppsButton /> */}
 
-      <UpgradeButton />
     </Header>
   );
 }

@@ -1,4 +1,4 @@
-const lang = {
+module.exports = {
   sign_up: 'Registrarse',
   manage_your_company_with: 'Gestioná tu empresa con',
   all_in_one_tool: 'Herramienta todo en uno',
@@ -454,5 +454,3 @@ const lang = {
   add_new_proforma_invoice: 'Agregar nuevo presupuesto',
   proforma_invoice: 'Presupuesto',
 };
-
-export default lang;

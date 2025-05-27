@@ -15,7 +15,7 @@ exports.moment = require('moment');
 // inserting an SVG
 exports.icon = (name) => {
   try {
-    return fs.readFileSync(`./public/images/icons/${name}.svg`);
+    return fs.readFileSync(`./public/images/icons/${name}.png`);
   } catch (error) {
     return null;
   }
