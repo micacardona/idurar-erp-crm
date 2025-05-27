@@ -5,6 +5,7 @@ const router = express.Router();
 const appControllers = require('@/controllers/appControllers');
 const { routesList } = require('@/models/utils');
 
+// Dynamically create routes for each entity in routesList
 const routerApp = (entity, controller) => {
   router.route(`/${entity}/create`).post(catchErrors(controller['create']));
   router.route(`/${entity}/read/:id`).get(catchErrors(controller['read']));
@@ -25,9 +26,12 @@ const routerApp = (entity, controller) => {
   }
 };
 
+// Make sure routesList contains product and service entities
 routesList.forEach(({ entity, controllerName }) => {
   const controller = appControllers[controllerName];
-  routerApp(entity, controller);
+  if (controller) {
+    routerApp(entity, controller);
+  }
 });
 
 module.exports = router;

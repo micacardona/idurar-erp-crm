@@ -87,6 +87,16 @@ function Sidebar({ collapsible, isMobile = false }) {
       icon: <ShopOutlined />,
     },
     {
+      key: 'services',
+      label: <Link to={'/services'}>{translate('services')}</Link>,
+      icon: <ShopOutlined />,
+    },
+    {
+      key: 'products',
+      label: <Link to={'/products'}>{translate('products')}</Link>,
+      icon: <ShopOutlined />,
+    },
+    {
       key: 'generalSettings',
       label: <Link to={'/settings'}>{translate('settings')}</Link>,
       icon: <SettingOutlined />,

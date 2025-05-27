@@ -453,6 +453,12 @@ const lang = {
   proforma_invoice_list: 'Lista de presupuestos',
   add_new_proforma_invoice: 'Agregar nuevo presupuesto',
   proforma_invoice: 'Presupuesto',
+  product: 'Producto',
+  service: 'Servicio',
+  service_list: 'Lista de servicios',
+  add_new_service: 'Agregar nuevo servicio',
+  add_new_product: 'Agregar nuevo producto',
+  product_list: 'Lista de productos'
 };
 
 export default lang;
